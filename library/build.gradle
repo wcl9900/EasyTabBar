@@ -26,9 +26,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+ext{
+    versionName = "1.0"//版本号
+    siteUrl = 'https://github.com/wcl9900/EasyTabBar'    // project homepage
+    gitUrl = 'https://github.com/wcl9900/EasyTabBar.git' // project git
+
+    groupId = "com.wcl.easytabbar" //组名称
+    artifactId = "easytabbar"
+
+    repository = "maven"//仓库名称
+    userOrgName = "wangchunlong"//组织名称
+
+    //库描述介绍
+    descRep = "简易TabBar，旨在使Tab布局配置更灵活"
+    //库版本信息描述
+    descVersion = ""
+}
+apply from: 'https://raw.githubusercontent.com/wcl9900/jcenter/master/publishJCenter.gradle'

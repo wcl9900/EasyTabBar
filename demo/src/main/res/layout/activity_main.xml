@@ -4,115 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/tab_info"
+    <Button
+        android:id="@+id/btn_normal_tabs"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="TAB：1"/>
-
-    <com.wcl.easytabbar.EasyTabBar
-        android:id="@+id/easytabbar"
+        android:layout_height="wrap_content"
+        android:text="简单Tabs"/>
+    <Button
+        android:id="@+id/btn_multi_tabs"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        app:defaultSelectedPosition="0">
-        <LinearLayout
-            android:id="@id/tabbar_item"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/tab_bg"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#fff"
-                android:text="TAB0"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="#fff"/>
-
-        <LinearLayout
-            android:id="@id/tabbar_item"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/tab_bg"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#fff"
-                android:text="TAB1"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="#fff"/>
-
-        <LinearLayout
-            android:id="@id/tabbar_item"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/tab_bg"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#fff"
-                android:text="TAB2"/>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="#fff"/>
-
-        <LinearLayout
-            android:id="@id/tabbar_item"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/tab_bg"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="#fff"
-                android:text="TAB3"/>
-        </LinearLayout>
-    </com.wcl.easytabbar.EasyTabBar>
+        android:layout_height="wrap_content"
+        android:text="多层Tabs"/>
 </LinearLayout>

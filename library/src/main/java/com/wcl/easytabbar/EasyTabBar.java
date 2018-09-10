@@ -139,7 +139,6 @@ public class EasyTabBar extends LinearLayout{
 		}
 	};
 
-
 	private void selectTab(View tabView) {
 		int index = tabViewList.indexOf(tabView);
 		

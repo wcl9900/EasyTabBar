@@ -1,61 +1,35 @@
 package com.wcl.easytabbar.demo;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.wcl.easytabbar.EasyTabBar;
-import com.wcl.easytabbar.OnTabSelectExpandListener;
-import com.wcl.easytabbar.OnTabSelectListener;
 import com.wcl.easytabbar.R;
 
 /**
  * EasyTabBar demo
  */
-public class MainActivity extends AppCompatActivity {
-
-    private TextView textViewInfo;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        EasyTabBar easyTabBar = findViewById(R.id.easytabbar);
-        easyTabBar.setRepeatSelectEnable(false);
 
-//        easyTabBar.setOnTabViewSelectListener(onTabSelectListener);
-        easyTabBar.setOnTabViewSelectListener(onTabSelectExpandListener);
-        textViewInfo = findViewById(R.id.tab_info);
+        findViewById(R.id.btn_normal_tabs).setOnClickListener(this);
+        findViewById(R.id.btn_multi_tabs).setOnClickListener(this);
     }
 
-    OnTabSelectListener onTabSelectListener = new OnTabSelectListener() {
-        @Override
-        public void onTabViewSelectedListener(EasyTabBar easyTabBar, View selectedTabView, int selectedPosition) {
-            showToast("选中了：" + selectedPosition);
-            textViewInfo.setText("TAB:" + selectedPosition);
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_normal_tabs:
+                startActivity(new Intent(this, NormalTabsActivity.class));
+                break;
+            case R.id.btn_multi_tabs:
+                startActivity(new Intent(this, MultiTabsActivity.class));
+                break;
         }
-    };
-
-    OnTabSelectListener onTabSelectExpandListener = new OnTabSelectExpandListener() {
-        @Override
-        public boolean onTabViewSelectedBeforeListener(EasyTabBar easyTabBar, View willSelectedTabView, int willSelectedPosition) {
-            showToast("选中前：" + willSelectedPosition);
-            if(willSelectedPosition == 1) {
-                return true;
-            }
-            return false;
-        }
-
-        @Override
-        public void onTabViewSelectedListener(EasyTabBar easyTabBar, View selectedTabView, int selectedPosition) {
-            showToast("选中了：" + selectedPosition);
-            textViewInfo.setText("TAB:" + selectedPosition);
-        }
-    };
-
-    private void showToast(String info){
-        Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
     }
 }
