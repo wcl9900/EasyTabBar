@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TabBarView 的选项卡子视图id -->
+    <item name="tabbar_item" type="id" />
+</resources>

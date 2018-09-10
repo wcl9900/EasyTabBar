@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EasyTabBar">
+        <attr name="tabViewId" format="reference"/>
+        <attr name="repeatSelectEnable" format="boolean"/>
+        <attr name="defaultSelectedPosition" format="integer"/>
+    </declare-styleable>
+</resources>
